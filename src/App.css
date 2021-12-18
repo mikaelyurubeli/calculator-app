@@ -1,38 +1,149 @@
-.App {
+.container {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.calculator-app {
+  background-color: #fff;
+  max-width: 210px;
+  height: auto;
+  margin: 10px 10px;
+  padding: 10px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5em;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.calculator-title {
+  margin-bottom: 20px;
   text-align: center;
+  font-weight: bold;
+
+  background-color: #194f92;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -10px;
+  padding: 10px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-operator {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-result {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fafafb;
+  border-radius: .25rem;
+  margin-bottom: 10px;
+}
+
+/* Error */
+
+.error-message {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Font */
+
+.font-bold {
+  font-weight: bold;
+}
+
+/* Input */
+
+.input-primary {
+  padding: 5px 7px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+}
+
+.input-primary:hover,
+.input-primary:focus {
+  border-color: rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.input-primary:active {
+  border-color: rgba(0, 0, 0, 1);
+}
+
+.input-checkbox {
+  border: 1px solid red;
+  border-radius: 0.15em;
+  margin: 5px 10px;
+}
+
+/* Button */
+
+.btn-primary {
+  align-items: center;
+  background-color: #194f92;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  /* color: rgba(0, 0, 0, 0.85); */
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
+  padding: 10px;
+  line-height: 2;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 40px;
+  height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary:hover,
+.btn-primary:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  /* color: rgba(0, 0, 0, 0.65); */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }
